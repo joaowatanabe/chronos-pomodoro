@@ -1,0 +1,15 @@
+/* Background da largura total da tela */
+.container-fluid {
+  max-width: auto;
+}
+
+/* Alinhar o conteúdo ao centro e limitar largura da página */
+.container {
+  max-width: 98rem; /* 980px */
+  margin: 0 auto;
+}
+
+/* Conteúdo com margem */
+.content {
+  margin: 3.2rem;
+}
