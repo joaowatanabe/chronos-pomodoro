@@ -1,3 +1,4 @@
+import { Logo } from './components/Logo';
 import { Heading } from './components/Heading';
 import { Container } from './components/Container';
 
@@ -8,7 +9,7 @@ export function App() {
   return (
     <>
       <Container>
-        <Heading>LOGO</Heading>
+        <Logo />
       </Container>
       <Container>
         <Heading>MENU</Heading>
