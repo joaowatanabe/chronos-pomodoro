@@ -1,0 +1,8 @@
+.container {
+  /* Fonte do timer adaptável, minimo de 8rem e max de 16rem */
+  font-size: clamp(8rem, 30vw, 16rem); 
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.3;
+}
