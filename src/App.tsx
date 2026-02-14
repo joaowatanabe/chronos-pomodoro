@@ -6,14 +6,27 @@ import { DefaultInput } from './components/DefaultInput';
 import { Cycles } from './components/Cycles';
 import { DefaultButton } from './components/DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
-import { Footer } from './components/Footer'
+import { Footer } from './components/Footer';
+import { Heading } from './components/Heading';
+import { useState } from 'react';
 
 import './styles/theme.css';
 import './styles/global.css';
 
 export function App() {
+  //Todos componentes que usam "numero" saibam das mudanças de valor
+
+  //SEMPRE que eu usar useState, não atribuir diretamente "="
+  const [numero, setNumero] = useState(0);
+
+  const handleClick = () => {
+    setNumero(prevState => prevState + 1);
+  };
+
   return (
     <>
+      <Heading>Número: {numero}</Heading>
+      <button onClick={handleClick}>Aumenta</button>
       <Container>
         <Logo />
       </Container>
@@ -27,7 +40,7 @@ export function App() {
         <form className='form' action=''>
           <div className='formRow'>
             <DefaultInput
-              labelText='Task'
+              labelText={numero.toString()}
               placeholder='Digite uma tarefa'
               id='meuInput'
               type='text'
@@ -48,7 +61,7 @@ export function App() {
         </form>
       </Container>
       <Container>
-        <Footer/>
+        <Footer />
       </Container>
     </>
   );
