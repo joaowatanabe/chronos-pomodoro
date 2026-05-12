@@ -8,7 +8,6 @@ import {
 import { useState, useEffect } from 'react';
 
 import styles from './styles.module.css';
-
 type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {

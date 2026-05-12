@@ -1,7 +1,9 @@
 import type { TaskModel } from './TaskModel';
 
+
+
 export type TaskStateModel = {
-  tasks: TaskModel[];
+  tasks: TaskModel[]; // Histórico
   secondsRemaining: number; //contador - calcular quantos segundos faltam
   formattedSecondsRemaining: string;
   activeTask: TaskModel | null;
